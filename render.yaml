@@ -1,7 +1,7 @@
 services:
-  - type: web
-    name: telegram-bot
-    runtime: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python webapp_bot_aiogram3_fixed.py
-    plan: free
+  - type: web # Указываем, что это веб-сервис (ваш бот будет работать как веб-сервис)
+    name: telegram-bot # Уникальное имя для вашего сервиса на Render
+    runtime: docker # Указываем Render использовать Dockerfile для сборки и запуска
+    buildCommand: "" # Оставляем пустым, так как все шаги сборки определены в Dockerfile
+    startCommand: "" # Оставляем пустым, так как команда запуска определена в Dockerfile (CMD)
+    plan: free # Выбираем бесплатный тарифный план
